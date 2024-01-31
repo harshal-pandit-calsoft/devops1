@@ -105,8 +105,7 @@ if [ "$cygwin" = "false" -a "$darwin" = "false" ] ; then
         fi
     else
         warn "Could not query maximum file descriptor limit: $MAX_FD_LIMIT"
-    fi
-fi
+
 
 # For Darwin, add options to specify how the application appears in the dock
 if $darwin; then
