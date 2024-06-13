@@ -20,14 +20,16 @@ jobs:
         node-version: '20'  # Specify the Node.js version you need
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
+        npm install wait-on
 
     - name: Run development server
       run: npm run dev &
 
     - name: Wait for server to start
       run: npx wait-on http://localhost:3000
-      timeout-minutes: 5
+      timeout-minutes: 1
 
     - name: Curl to UI URL
       run: curl http://localhost:3000  # Adjust the URL based on your project's configuration
