@@ -9,9 +9,6 @@
   "scripts": {
     "dev": "npm run dev &"
   },
-  "dependencies": {
-    "npm install"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC"
