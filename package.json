@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "npm run dev &"
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
