@@ -36,9 +36,9 @@ jobs:
       run: cat server.log
 
     - name: Wait for server to start
-      run: npx wait-on http://localhost:3001
+      run: npx wait-on http://localhost:3000
       timeout-minutes: 5
 
     - name: Curl to UI URL
-      run: curl http://localhost:3001  # Adjust the URL based on your project's configuration
+      run: curl http://localhost:3000  # Adjust the URL based on your project's configuration
 
