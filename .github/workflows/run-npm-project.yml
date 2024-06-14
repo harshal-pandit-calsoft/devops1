@@ -24,15 +24,20 @@ jobs:
         npm install
         npm install wait-on
 
-    - name: Run development server
-      run: npm run dev > server.log 2>&1 &
+    - name: Start development server
+      run: |
+        echo "Starting server..." 
+        npm run dev > server.log 2>&1 &
+        echo "Server started, logging to server.log"
+        sleep 5 # Give server time to start
+
 
     - name: Output server logs
       run: cat server.log
 
     - name: Wait for server to start
       run: npx wait-on http://localhost:3001
-      timeout-minutes: 1
+      timeout-minutes: 10
 
     - name: Curl to UI URL
       run: curl http://localhost:3001  # Adjust the URL based on your project's configuration
